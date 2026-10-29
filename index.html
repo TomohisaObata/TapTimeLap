@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- viewport-fit=cover でノッチ側まで描画し、safe-area-inset で UI を逃がす -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#07090c" />
+    <!-- ホーム画面から起動したときに Safari の UI を消す（iOS 用の旧来キー） -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="TapTimeLap" />
+    <!-- ?v=__ICON_VERSION__ はアイコンの中身が変わるたびに vite.config.ts が差し替える。
+         iOS Safari は apple-touch-icon を URL 単位で長くキャッシュするため、
+         ファイル名を固定したまま更新を確実に反映させるためのクエリ文字列。 -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=__ICON_VERSION__" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png?v=__ICON_VERSION__" />
+    <title>TapTimeLap</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

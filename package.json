@@ -1,0 +1,32 @@
+{
+  "name": "taptimelap",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:lan": "vite --host",
+    "build": "tsc -b --noEmit && vite build",
+    "preview": "vite preview --host",
+    "typecheck": "tsc -b --noEmit",
+    "icons": "node scripts/build-icon.mjs",
+    "icons:placeholder": "node scripts/gen-icons.mjs",
+    "welcome-logo": "node scripts/build-welcome-logo.mjs"
+  },
+  "engines": {
+    "node": ">=20.11.0"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-basic-ssl": "^2.0.0",
+    "@vitejs/plugin-react": "^4.4.0",
+    "typescript": "^5.7.0",
+    "vite": "^6.3.0",
+    "vite-plugin-pwa": "^0.21.2"
+  }
+}
